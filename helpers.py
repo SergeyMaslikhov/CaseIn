@@ -425,7 +425,7 @@ AnchorLayout:
                 name: 'map'
                 Image:
                     
-                    source: 'map.jpeg'
+                    source: 'map.jpg'
                     
                     
                    
@@ -447,7 +447,7 @@ AnchorLayout:
                                 Ellipse:
                                     pos: 80, 800
                                     size: 230 , 231
-                                    source: 'lapenko.jpeg'
+                                    source: 'lapenko.jpg'
                                     
                             
                         MDList:
