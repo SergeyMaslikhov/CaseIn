@@ -79,7 +79,7 @@ AnchorLayout:
                     size_hint_x:None
                     width:auth.width / 1.5
                 MDCheckbox:
-                    id: check
+                    id: check1
                     size_hint: None, None
                     size: dp(48), dp(48)
                     pos_hint: {'center_x': .3, 'center_y': .4}

@@ -9,7 +9,7 @@ import webbrowser
 from kivy.uix.scrollview import ScrollView
 from kivy.properties import StringProperty
 import os
-Window.size = (350, 650)
+
 
 class ScrolllabelLabel(ScrollView):
     text = StringProperty('')
@@ -64,7 +64,7 @@ class CaseInApp(MDApp):
 
 
     def open_doc(self):
-        os.system('documentation.pdf')
+        webbrowser.open('https://drive.google.com/file/d/1KvGlyXc5FFb2O1RUtM-Of8IWqy8-tjjQ/view')
         self.dialog.dismiss()
 
     def back(self):
@@ -96,7 +96,7 @@ class CaseInApp(MDApp):
                                                 MDFlatButton(text='Нет', on_release=lambda x: self.dialog.dismiss())]
                                        )
                 self.dialog.open()
-            if not self.root.ids.check.active:
+            if not self.root.ids.check1.active:
                 self.root.ids.password.text = ''
         # elif not self.root.ids.login.text:
         #     self.root.ids.top_bar.disabled = False
