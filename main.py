@@ -8,7 +8,6 @@ from kivy.uix.screenmanager import SwapTransition, SlideTransition
 import webbrowser
 from kivy.uix.scrollview import ScrollView
 from kivy.properties import StringProperty
-import os
 
 
 class ScrolllabelLabel(ScrollView):
@@ -116,7 +115,7 @@ class CaseInApp(MDApp):
 
 
         else:
-            dialog = MDDialog(title='Неправильный логин или пароль. Попробуйте user: user или admin: admin',
+            dialog = MDDialog(title='Неправильный логин или пароль. Попробуйте \n user: user \n admin: admin',
                                    size_hint=(0.8, 1),
                                    buttons=[MDFlatButton(text='Close', on_release=lambda x: dialog.dismiss())]
                                    )

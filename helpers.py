@@ -194,8 +194,7 @@ AnchorLayout:
                             GridLayout:
                                 size_hint_y: None
                                 cols:2
-                                row_force_default: True
-                                row_default_height: 100    
+                                   
                                 GridLayout:
                                     cols: 2
                                     rows:2
@@ -226,22 +225,22 @@ AnchorLayout:
                                         md_bg_color: 9/255, 105/255, 161/255, 1
                                         line_color: 0, 0, 0, 1
                                         on_press: app.open_link('https://rosatom.ru/')
-                                        size_hint: 1, 1
+                                        width: auth.width / 3
                                         halign: 'center'
                                     MDRoundFlatButton:         
                                         text: 'Covid-19'
                                         theme_text_color: "Custom"
                                         text_color: 1, 1, 1, 1
                                         md_bg_color: 55/255, 197/255, 219/255, 1
-                                        on_press: app.open_link('https://rosatom.ru/search/index.php?tags=COVID-19')
+                                        on_press: app.open_link('https://covid19.rosminzdrav.ru/')
                                         font_size: "24"
-                                        size_hint: 1, 1
+                                        width: auth.width / 3
                                         halign: 'center'
             Screen:
                 name: 'messenger'
                 on_pre_enter: app.training('messenger_train')
                 FloatLayout:
-                    FitImage:
+                    Image:
                         source: 'unname1d.png'
                 BoxLayout:
                     padding: 10
@@ -362,10 +361,10 @@ AnchorLayout:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
                                 size_hint: 1, None
-                                height: 80
+                                
                                 
                             MDList:
                                 MDLabel:
@@ -383,7 +382,7 @@ AnchorLayout:
                                             size: self.size
                                             pos: self.pos
                                     size_hint: 1, None
-                                    height: 70
+                                    
                                     
                                     
                                 TwoLineIconListItem:
@@ -438,7 +437,7 @@ AnchorLayout:
                                             size: self.size
                                             pos: self.pos
                                     size_hint: 1, None
-                                    height: 70
+                                    
                                     
                                 TwoLineIconListItem:
                                     secondary_text: 'Последняя оценка: 100%'
@@ -523,6 +522,7 @@ AnchorLayout:
                                     font_style: 'H6'
                                     text_color: (1, 1, 1, 1)
                                     background_color: 0, 0, 0,1
+                                    
                                     canvas.before:
                                         Color:
                                             rgba: self.background_color
@@ -530,7 +530,8 @@ AnchorLayout:
                                             radius: [7]        
                                             size: self.size
                                             pos: self.pos
-                                    size_hint: 1, None
+
+                          
                                 
                             MDList:
                                 OneLineListItem:
@@ -642,29 +643,29 @@ AnchorLayout:
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'home.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'home1.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'home2.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'home3.png'
                         MDLabel:
@@ -685,22 +686,22 @@ AnchorLayout:
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'home4.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'home5.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'home6.png'
                         MDRectangleFlatButton:         
@@ -728,22 +729,22 @@ AnchorLayout:
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'chat.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'chat1.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'chat2.png'
                         
@@ -772,22 +773,22 @@ AnchorLayout:
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'tasks.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'tasks1.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'tasks2.png'
                         MDLabel:
@@ -808,16 +809,16 @@ AnchorLayout:
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'tasks3.png'
                         
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'tasks4.png'
             
@@ -846,15 +847,15 @@ AnchorLayout:
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'mapp.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'map1.png'
                         MDRectangleFlatButton:         
@@ -882,15 +883,15 @@ AnchorLayout:
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            height: 1100
+                            size_hint: .7, None
                             Image:
                                 source: 'profile.png'
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'profile1.png'
                         MDLabel:
@@ -911,16 +912,16 @@ AnchorLayout:
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'profile2.png'
                         
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'profile3.png'
                         MDLabel:
@@ -942,8 +943,8 @@ AnchorLayout:
                         MDCard:
                             orientation: 'vertical'
                             pos_hint: {'center_x': .5, 'center_y': .7}
-                            size_hint: .9, None
-                            height: 600
+                            size_hint: .7, None
+                            height: 1100
                             Image:
                                 source: 'exit.png'
             
@@ -1064,7 +1065,7 @@ AnchorLayout:
                 BoxLayout:
                     orientation: 'vertical'
                     padding: 10
-                    FitImage:
+                    Image:
                         source: 'cov.jpg'
                     MDRectangleFlatButton:         
                         text: 'Готово'
@@ -1089,19 +1090,21 @@ AnchorLayout:
                          
                         MDList:
                             MDLabel:         
-                                text: 'Чему равна предельно допустимая мощность дозы внешнего облучения для 36-часовой рабочей недели?'
+                                text: 'Предельно допустимая мощность внешнего облучения для 36-часовой рабочей недели?'
                                 theme_text_color: 'Custom'
                                 halign: 'center'
                                 font_style: 'H6'
-                                text_color: (1, 1, 1, 1)
+                                text_color: (0, 0, 0, 1)
                                 background_color: 9/255, 105/255, 161/255, 1
                                 canvas.before:
                                     Color:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size[0], self.size[1] + 10
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
+                                size_hint: 1, None
+                                
                                 size_hint: 1, None
                             BoxLayout:
                                 size_hint_y: None
@@ -1161,23 +1164,24 @@ AnchorLayout:
                                 theme_text_color: 'Custom'
                                 halign: 'center'
                                 font_style: 'H6'
-                                text_color: (1, 1, 1, 1)
+                                text_color: (0, 0, 0, 1)
                                 background_color: 9/255, 105/255, 161/255, 1
                                 canvas.before:
                                     Color:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size[0], self.size[1] + 10
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
                                 size_hint: 1, None
+                                
                             BoxLayout:
                                 size_hint_y: None
                                 Check1:
                                     
                                     
                                 MDLabel:
-                                    text: ' Предотвращение развития запроектных аварий и ослабление их последствий.'
+                                    text: ' Предотвращение развития запроектных аварий.'
                                     theme_text_color: 'Custom'
                                     text_color: (0, 0, 0, 1)
                                     size_hint: 1, None
@@ -1190,7 +1194,7 @@ AnchorLayout:
                                 Check1:
                                    
                                 MDLabel:
-                                    text: ' Защита герметичного ограждения от разрушения при запроектных авариях и поддержание его работоспособности.'
+                                    text: ' Защита герметичного ограждения от разрушения.'
                                     theme_text_color: 'Custom'
                                     text_color: (0, 0, 0, 1)
                                     size_hint: 1, None
@@ -1227,16 +1231,17 @@ AnchorLayout:
                                 theme_text_color: 'Custom'
                                 halign: 'center'
                                 font_style: 'H6'
-                                text_color: (1, 1, 1, 1)
+                                text_color: (0, 0, 0, 1)
                                 background_color: 9/255, 105/255, 161/255, 1
                                 canvas.before:
                                     Color:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size[0], self.size[1] + 10
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
                                 size_hint: 1, None
+                               
                             BoxLayout:
                                 size_hint_y: None
                                 Check2:
@@ -1294,16 +1299,17 @@ AnchorLayout:
                                 theme_text_color: 'Custom'
                                 halign: 'center'
                                 font_style: 'H6'
-                                text_color: (1, 1, 1, 1)
+                                text_color: (0, 0, 0, 1)
                                 background_color: 9/255, 105/255, 161/255, 1
                                 canvas.before:
                                     Color:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size[0], self.size[1] + 10
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
                                 size_hint: 1, None
+                                
                             BoxLayout:
                                 size_hint_y: None
                                 Check3:
@@ -1360,16 +1366,17 @@ AnchorLayout:
                                 theme_text_color: 'Custom'
                                 halign: 'center'
                                 font_style: 'H6'
-                                text_color: (1, 1, 1, 1)
+                                text_color: (0, 0, 0, 1)
                                 background_color: 9/255, 105/255, 161/255, 1
                                 canvas.before:
                                     Color:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size[0], self.size[1] + 10
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
                                 size_hint: 1, None
+                                
                             BoxLayout:
                                 size_hint_y: None
                                 Check4:
@@ -1447,14 +1454,14 @@ AnchorLayout:
                                 theme_text_color: 'Custom'
                                 halign: 'center'
                                 font_style: 'H6'
-                                text_color: (1, 1, 1, 1)
+                                text_color: (0, 0, 0, 1)
                                 background_color: 9/255, 105/255, 161/255, 1
                                 canvas.before:
                                     Color:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size[0], self.size[1] + 10
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
                                 size_hint: 1, None
                             BoxLayout:
@@ -1515,14 +1522,14 @@ AnchorLayout:
                                 theme_text_color: 'Custom'
                                 halign: 'center'
                                 font_style: 'H6'
-                                text_color: (1, 1, 1, 1)
+                                text_color: (0, 0, 0, 1)
                                 background_color: 9/255, 105/255, 161/255, 1
                                 canvas.before:
                                     Color:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size[0], self.size[1] + 10
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
                                 size_hint: 1, None
                             BoxLayout:
@@ -1581,14 +1588,14 @@ AnchorLayout:
                                 theme_text_color: 'Custom'
                                 halign: 'center'
                                 font_style: 'H6'
-                                text_color: (1, 1, 1, 1)
+                                text_color: (0, 0, 0, 1)
                                 background_color: 9/255, 105/255, 161/255, 1
                                 canvas.before:
                                     Color:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size[0], self.size[1] + 10
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
                                 size_hint: 1, None
                             BoxLayout:
@@ -1648,14 +1655,14 @@ AnchorLayout:
                                 theme_text_color: 'Custom'
                                 halign: 'center'
                                 font_style: 'H6'
-                                text_color: (1, 1, 1, 1)
+                                text_color: (0, 0, 0, 1)
                                 background_color: 9/255, 105/255, 161/255, 1
                                 canvas.before:
                                     Color:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size[0], self.size[1] + 10
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
                                 size_hint: 1, None
                             BoxLayout:
@@ -1710,18 +1717,18 @@ AnchorLayout:
                                     height: check.height
                         MDList:
                             MDLabel:         
-                                text: 'Какой стратегии перегрузки следует прдерживаться для уменьшения утечки нейтронов?'
+                                text: 'Какой стратегии перегрузки следует придерживаться для уменьшения утечки нейтронов?'
                                 theme_text_color: 'Custom'
                                 halign: 'center'
                                 font_style: 'H6'
-                                text_color: (1, 1, 1, 1)
+                                text_color: (0, 0, 0, 1)
                                 background_color: 9/255, 105/255, 161/255, 1
                                 canvas.before:
                                     Color:
                                         rgba: self.background_color
                                     RoundedRectangle:
                                         radius: [7]        
-                                        size: self.size[0], self.size[1] + 10
+                                        size: self.size[0], self.size[1] + 30
                                         pos: self.pos
                                 size_hint: 1, None
                             BoxLayout:
